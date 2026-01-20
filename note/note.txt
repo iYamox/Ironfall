@@ -1,0 +1,6 @@
+1 = Wall
+W = Water
+H = House
+E = Eglise
+T = Tree
+P = Player
