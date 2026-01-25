@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:22:48 by amary             #+#    #+#             */
-/*   Updated: 2026/01/20 16:34:48 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/25 14:58:58 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define Ironfall
 
 #include "../minilibx-linux/mlx.h"
+#include <stdbool.h>
 
 # define KEY_W 119
 # define KEY_A 97
@@ -63,5 +64,10 @@ typedef struct s_game
 	t_img		img;
 	t_player	player;
 }				t_game;
+
+int		main(void);
+bool	initialise_map(t_game *game);
+bool	init_texture(t_game *game);
+
 
 #endif

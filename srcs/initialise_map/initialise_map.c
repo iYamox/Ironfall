@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   initialise_map.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/25 14:53:30 by amary             #+#    #+#             */
+/*   Updated: 2026/01/25 14:57:13 by amary            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/Ironfall.h"
 
-int	initialise_map(t_game *game)
+bool	initialise_map(t_game *game)
 {
-	if (!check_map(game)) // Check la map n'a pas de probleme (tous les character si y'a pas de trou dans la map, etc...)
-		return (write(2, "Map error\n", 11), 0);
 	if (!init_texture(game))
-		return (write(2, "Texture error\n", 15), 0);
+		return (write(2, "Texture error\n", 15), false);
 }
