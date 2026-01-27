@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:22:48 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:11:47 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/27 20:24:18 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include "MLX42/MLX42.h"
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 # define KEY_W 119
 # define KEY_A 97

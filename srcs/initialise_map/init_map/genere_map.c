@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 19:51:09 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:15:34 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/27 20:26:57 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	genere_map(char **map, t_game *game)
 	int	x;
 	int	y;
 
-	y = 0;
+	ft_malloc_map(map, game);
 	while (map[y])
 	{
 		x = 0;
@@ -28,8 +28,6 @@ void	genere_map(char **map, t_game *game)
 		}
 		y++;
 	}
-	game->maps.lobby.height = y;
-	game->maps.lobby.width = x;
 	printf("%d", y);
 	printf("\n%d", x);
 }
