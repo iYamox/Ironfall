@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   render_map.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 16:27:16 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:08:51 by amary            ###   ########.fr       */
+/*   Created: 2026/01/27 19:54:05 by amary             #+#    #+#             */
+/*   Updated: 2026/01/27 20:14:00 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Ironfall.h"
+#include "../../../include/Ironfall.h"
 
-int	main(void)
+void	render_map(t_game *game, t_map *map)
 {
-	t_game	game;
-
-	if (!initialise_map(&game))
-		return (write(2, "Initialise map error\n", 22), 1);
+	int	x;
+	int	y;
+	(void)game;
+	y = 0;
+	while (y < map->height)
+	{
+		x = 0;
+		while (x < map->width)
+		{
+			// render_tile(game, map->grid[y][x], x, y);
+			x++;
+		}
+		y++;
+	}
 }

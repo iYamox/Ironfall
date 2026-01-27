@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   create_map.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 16:27:16 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:08:51 by amary            ###   ########.fr       */
+/*   Created: 2026/01/27 18:46:32 by amary             #+#    #+#             */
+/*   Updated: 2026/01/27 20:12:08 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Ironfall.h"
+#include "../../include/Ironfall.h"
 
-int	main(void)
+void	create_map(t_game *map)
 {
-	t_game	game;
-
-	if (!initialise_map(&game))
-		return (write(2, "Initialise map error\n", 22), 1);
+	create_lobby(map);
 }

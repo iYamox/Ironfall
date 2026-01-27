@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 16:27:16 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:08:51 by amary            ###   ########.fr       */
+/*   Created: 2026/01/27 18:35:32 by amary             #+#    #+#             */
+/*   Updated: 2026/01/27 19:35:12 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Ironfall.h"
+#include "../../include/Ironfall.h"
 
-int	main(void)
+bool	init_map(t_game *game)
 {
-	t_game	game;
+	create_map(game);
 
-	if (!initialise_map(&game))
-		return (write(2, "Initialise map error\n", 22), 1);
+	return (true);
 }

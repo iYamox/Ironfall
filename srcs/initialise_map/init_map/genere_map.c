@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   genere_map.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 16:27:16 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:08:51 by amary            ###   ########.fr       */
+/*   Created: 2026/01/27 19:51:09 by amary             #+#    #+#             */
+/*   Updated: 2026/01/27 20:15:34 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Ironfall.h"
+#include "../../../include/Ironfall.h"
 
-int	main(void)
+void	genere_map(char **map, t_game *game)
 {
-	t_game	game;
+	int	x;
+	int	y;
 
-	if (!initialise_map(&game))
-		return (write(2, "Initialise map error\n", 22), 1);
+	y = 0;
+	while (map[y])
+	{
+		x = 0;
+		while (map[y][x])
+		{
+			game->maps.lobby.grid[y][x] = map[y][x];
+			x++;
+		}
+		y++;
+	}
+	game->maps.lobby.height = y;
+	game->maps.lobby.width = x;
+	printf("%d", y);
+	printf("\n%d", x);
 }
