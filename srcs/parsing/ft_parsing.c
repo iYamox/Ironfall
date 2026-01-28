@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:49:50 by amary             #+#    #+#             */
-/*   Updated: 2026/01/28 15:52:12 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/28 16:24:19 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_parsing(t_game *game)
 {
-	init_texture(game);
 	create_maps(game);
 }

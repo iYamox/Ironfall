@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 19:54:05 by amary             #+#    #+#             */
-/*   Updated: 2026/01/28 15:51:07 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/28 17:31:30 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	render_map(t_game *game, t_map *map)
 {
 	int	x;
 	int	y;
-	
+
 	y = 0;
 	while (y < map->height)
 	{

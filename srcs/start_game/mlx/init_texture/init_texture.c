@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_texture.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 16:27:16 by amary             #+#    #+#             */
-/*   Updated: 2026/01/28 16:20:39 by amary            ###   ########.fr       */
+/*   Created: 2026/01/25 14:51:58 by amary             #+#    #+#             */
+/*   Updated: 2026/01/28 16:41:10 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Ironfall.h"
+#include "../../../../include/Ironfall.h"
 
-int	main(void)
+void	init_texture(t_game *game)
 {
-	t_game	game;
-
-	ft_parsing(&game);
-	start_game(&game);
-	// ft_free(&game);
-
-	return (0);
+	terrain_and_architecture_texture_init(game);
+	player_texture_init(game);
 }

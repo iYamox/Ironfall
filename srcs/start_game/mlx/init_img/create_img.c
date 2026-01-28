@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   create_img.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 16:27:16 by amary             #+#    #+#             */
-/*   Updated: 2026/01/28 16:20:39 by amary            ###   ########.fr       */
+/*   Created: 2026/01/28 16:23:14 by amary             #+#    #+#             */
+/*   Updated: 2026/01/28 17:40:26 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Ironfall.h"
+#include "../../../../include/Ironfall.h"
 
-int	main(void)
+void	create_img(t_game *game)
 {
-	t_game	game;
-
-	ft_parsing(&game);
-	start_game(&game);
-	// ft_free(&game);
-
-	return (0);
+	terrain_and_architecture_img_init(game);
+	player_img_init(game);
 }

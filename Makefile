@@ -1,7 +1,7 @@
 NAME = Ironfall
 
 CC = cc
-# CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 # MLX42
 MLX42_PATH = MLX42
@@ -12,15 +12,20 @@ LIBS = -lglfw -lGL -ldl -lm
 
 SRC =	srcs/main.c \
 		srcs/parsing/ft_parsing.c \
-		srcs/parsing/init_texture/init_texture.c \
-		srcs/parsing/init_texture/terrain_and_architecture_init.c \
-		srcs/parsing/init_texture/init_player.c \
 		srcs/parsing/create_maps/create_maps.c \
 		srcs/parsing/create_maps/create_lobby.c \
 		srcs/parsing/create_maps/fill_map.c \
 		srcs/parsing/create_maps/render_map.c \
 		srcs/parsing/create_maps/ft_malloc_maps.c \
 		srcs/parsing/create_maps/render_tile.c \
+		srcs/start_game/start_game.c \
+		srcs/start_game/mlx/init_mlx.c \
+		srcs/start_game/mlx/init_texture/init_texture.c \
+		srcs/start_game/mlx/init_texture/player_texture_init.c \
+		srcs/start_game/mlx/init_texture/terrain_and_architecture_texture_init.c \
+		srcs/start_game/mlx/init_img/create_img.c \
+		srcs/start_game/mlx/init_img/terrain_and_architecture_img_init.c \
+		srcs/start_game/mlx/init_img/player_img_init.c \
 		srcs/close_game/ft_free.c \
 
 OBJ = $(SRC:.c=.o)

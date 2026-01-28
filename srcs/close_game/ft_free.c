@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:43:52 by amary             #+#    #+#             */
-/*   Updated: 2026/01/28 15:35:25 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/28 16:12:55 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,8 @@ void	free_grid_maps(t_all_maps *maps)
 
 void	ft_free(t_game *game)
 {
-	free_grid_maps(&game->maps);
+	if (&game->maps)
+	{
+		free_grid_maps(&game->maps);
+	}
 }
