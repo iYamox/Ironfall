@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   genere_map.c                                       :+:      :+:    :+:   */
+/*   render_tile.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 19:51:09 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:26:57 by amary            ###   ########.fr       */
+/*   Created: 2026/01/28 15:39:21 by amary             #+#    #+#             */
+/*   Updated: 2026/01/28 15:51:11 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/Ironfall.h"
 
-void	genere_map(char **map, t_game *game)
+void	render_tile(t_game *game, char title, int y, int x)
 {
-	int	x;
-	int	y;
-
-	ft_malloc_map(map, game);
-	while (map[y])
-	{
-		x = 0;
-		while (map[y][x])
-		{
-			game->maps.lobby.grid[y][x] = map[y][x];
-			x++;
-		}
-		y++;
-	}
-	printf("%d", y);
-	printf("\n%d", x);
+	if (title == 'W')
+		mlx_image_to_window(game->mlx, game->terrain_img.water, x * 96, y * 96);
 }

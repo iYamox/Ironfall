@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_lobby.c                                     :+:      :+:    :+:   */
+/*   create_maps.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/27 19:07:02 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:15:14 by amary            ###   ########.fr       */
+/*   Created: 2026/01/27 18:46:32 by amary             #+#    #+#             */
+/*   Updated: 2026/01/28 15:50:55 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/Ironfall.h"
 
-void	create_lobby(t_game *game)
+void	create_maps(t_game *game)
 {
-	char *lobby_map[] = 
-	{
-		"WWWWWWWWWWWW"
-		"W1111111111W",
-		"W1P00E00001W",
-		"W100000T001W",
-		"W1000H00001W",
-		"W1111111111W",
-		"WWWWWWWWWWWW",
-		NULL
-	};
-	genere_map(lobby_map, game);
-	// render_map(game, &game->maps.lobby);
+	create_lobby(game);
+	// create_player_house(game);
 }

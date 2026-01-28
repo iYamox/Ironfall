@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_texture.c                                     :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/25 14:51:58 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 18:51:43 by amary            ###   ########.fr       */
+/*   Created: 2026/01/28 14:43:52 by amary             #+#    #+#             */
+/*   Updated: 2026/01/28 15:35:25 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../../include/Ironfall.h"
+#include "../../include/Ironfall.h"
 
-bool	init_texture(t_game *game)
+void	free_split(t_map *map)
 {
-	terrain_and_architecture_init(game);
-	player_init(game);
-	
-	return (true);
+	int	j;
+
+	j = 0;
+	while(map->grid[j])
+		free(map->grid[j++]);
+}
+
+void	free_grid_maps(t_all_maps *maps)
+{
+	if (&maps->lobby)
+		free_split(&maps->lobby);
+}
+
+void	ft_free(t_game *game)
+{
+	free_grid_maps(&game->maps);
 }

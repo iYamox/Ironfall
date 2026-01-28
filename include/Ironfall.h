@@ -6,7 +6,7 @@
 /*   By: amary <amary@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 16:22:48 by amary             #+#    #+#             */
-/*   Updated: 2026/01/27 20:24:18 by amary            ###   ########.fr       */
+/*   Updated: 2026/01/28 15:53:46 by amary            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ typedef struct s_all_maps
 
 typedef struct s_game
 {
-	void		*		mlx;
+	void				*mlx;
 	void				*window;
 	t_all_maps			maps;
 	t_terrain_img		terrain_img;
@@ -91,13 +91,18 @@ typedef struct s_game
 }						t_game;
 
 int		main(void);
-bool	initialise_map(t_game *game);
-bool	init_texture(t_game *game);
+void	ft_parsing(t_game *game);
+void	init_texture(t_game *game);
 void	terrain_and_architecture_init(t_game *game);
 void	player_init(t_game *game);
-bool	init_map(t_game *game);
-void	create_map(t_game *game);
+void	create_maps(t_game *game);
 void	create_lobby(t_game *game);
-void	genere_map(char **map, t_game *game);
+void	fill_map(char **map, t_game *game);
 void	render_map(t_game *game, t_map *map);
+void	ft_malloc_maps(t_game *game);
+void	ft_free(t_game *game);
+void	free_grid_maps(t_all_maps *maps);
+void	free_split(t_map *map);
+void	render_tile(t_game *game, char title, int y, int x);
+
 #endif
